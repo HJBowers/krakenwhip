@@ -3,8 +3,14 @@
 }
 
 .App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
+  height: 30vmin;
+  width: 100%;
+  pointer-events: none;
+}
+
+.App-banner {
+  height: 30vmin;
+  background-color: black;
   pointer-events: none;
 }
 
