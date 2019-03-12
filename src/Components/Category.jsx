@@ -7,13 +7,13 @@ const Category = ({ match }) => {
       {" "}
       <ul>
         <li>
-          <Link to={`${match.url}/shoes`}>Shoes</Link>
+          <Link to={`${match.url}/belts`}>Belts</Link>
         </li>
         <li>
-          <Link to={`${match.url}/boots`}>Boots</Link>
+          <Link to={`${match.url}/harness`}>Harness</Link>
         </li>
         <li>
-          <Link to={`${match.url}/footwear`}>Footwear</Link>
+          <Link to={`${match.url}/clothes`}>Clothes</Link>
         </li>
       </ul>
       <Route

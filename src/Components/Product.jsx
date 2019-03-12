@@ -1,4 +1,5 @@
 import React from "react";
+import rubber from '../assets/rubber.jpg'
 
 const Product = ({ match, data }) => {
   var product = data.find(p => p.id === Number(match.params.productId));
@@ -10,7 +11,8 @@ const Product = ({ match, data }) => {
         <h3> {product.name} </h3>
         <p>{product.description}</p>
         <hr />
-        <h4>{product.status}</h4>{" "}
+        <h4>{product.status}</h4>
+        <img src={product.img} alt="rubber" height="400"/>
       </div>
     );
   else productData = <h2> Sorry. Product doesnt exist </h2>;

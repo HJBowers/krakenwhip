@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Redirect, Link, Route, Switch } from "react-router-dom";
 import Login, {fakeAuth} from "./Components/Login";
-import Category from './Components/Category';
+// import Category from './Components/Category';
 import Products from './Components/Products';
 import Home from './Components/Home';
 import Admin from './Components/Admin';
@@ -13,7 +13,7 @@ class App extends Component {
     return (
       <div>
         <div className="App-banner text-center">
-          <img src={logo} className="App-logo rounded" alt="Responsive image" />
+          <img src={logo} className="App-logo rounded" alt="Krakenwhip" />
         </div>
         <nav className="navbar navbar">
           <ul className="nav">
@@ -21,13 +21,10 @@ class App extends Component {
               <Link to="/">Home</Link>
             </li>
             <li>
-              <Link to="/category">Category</Link>
-            </li>
-            <li>
               <Link to="/products">Products</Link>
             </li>
             <li>
-              <Link to="/admin">Admin area</Link>
+              <Link to="/admin">Admin</Link>
             </li>
           </ul>
         </nav>
@@ -35,7 +32,6 @@ class App extends Component {
         <Switch>
           <Route path="/login" component={Login} />
           <Route exact path="/" component={Home} />
-          <Route path="/category" component={Category} />
           <PrivateRoute path="/admin" component={Admin} />
           <Route path="/products" component={Products} />
         </Switch>
