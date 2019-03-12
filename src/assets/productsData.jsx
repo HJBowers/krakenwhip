@@ -1,26 +1,37 @@
-export default productsData = [
+import rubber from './rubber.jpg'
+import harness from './harness.jpg'
+import batbelt from './batbelt.jpg'
+import choli from './choli.jpg'
+
+const productsData = [
   {
     id: 1,
-    name: 'NIKE Liteforce Blue Sneakers',
+    name: 'Bat Wing Belt',
     description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin molestie.',
-    status: 'Available'
+    status: 'Available',
+    img: batbelt
   },
   {
     id: 2,
-    name: 'Stylised Flip Flops and Slippers',
+    name: 'Peek-a-boo Vest',
     description: 'Mauris finibus, massa eu tempor volutpat, magna dolor euismod dolor.',
-    status: 'Out of Stock'
+    status: 'Out of Stock',
+    img: rubber
   },
   {
     id: 3,
-    name: 'ADIDAS Adispree Running Shoes',
+    name: 'Choli Top',
     description: 'Maecenas condimentum porttitor auctor. Maecenas viverra fringilla felis, eu pretium.',
-    status: 'Available'
+    status: 'Available',
+    img: choli
   },
   {
     id: 4,
-    name: 'ADIDAS Mid Sneakers',
+    name: 'Harness',
     description: 'Ut hendrerit venenatis lacus, vel lacinia ipsum fermentum vel. Cras.',
-    status: 'Out of Stock'
+    status: 'Out of Stock',
+    img: harness
   }
 ];
+
+export default productsData
