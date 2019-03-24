@@ -1,5 +1,5 @@
 import React from "react";
-import rubber from '../assets/rubber.jpg'
+// import rubber from '../assets/rubber.jpg'
 
 const Product = ({ match, data }) => {
   var product = data.find(p => p.id === Number(match.params.productId));
