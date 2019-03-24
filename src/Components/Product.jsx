@@ -13,6 +13,7 @@ const Product = ({ match, data }) => {
         <hr />
         <h4>{product.status}</h4>
         <img src={product.img} alt="rubber" height="400"/>
+d
       </div>
     );
   else productData = <h2> Sorry. Product doesnt exist </h2>;
