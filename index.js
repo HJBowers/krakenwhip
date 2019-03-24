@@ -24,6 +24,10 @@ app.use(session(
   }
 ))
 
+app.get('/', function(req, res, next){
+    res.sendStatus(200);
+});
+
 const port = process.env.PORT || 3001
 app.listen(port)
 
