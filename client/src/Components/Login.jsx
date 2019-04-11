@@ -3,11 +3,8 @@ import { Redirect } from 'react-router-dom';
 
 
 class Login extends React.Component {
-
   constructor() {
-
     super();
-
     this.state = {
       redirectToReferrer: false
     }
@@ -15,7 +12,6 @@ class Login extends React.Component {
   }
 
   login() {
-
     fakeAuth.authenticate(() => {
       this.setState({ redirectToReferrer: true })
     })
@@ -38,8 +34,6 @@ class Login extends React.Component {
       </div>
     )
   }
-
-
 }
 
 /* A fake authentication function */
@@ -51,6 +45,5 @@ export const fakeAuth = {
     setTimeout(cb, 100);
   }
 };
-
 
 export default Login
