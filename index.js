@@ -8,7 +8,7 @@ const cors = require('cors')
 const https = require('https')
 const http = require('http')
 const fetch = require('node-fetch')
-const mongoose = require('mongoose');
+// const mongoose = require('mongoose');
 const adminController = require('./controllers/admin_controller');
 const cloudinaryController = require('./controllers/cloudinary_controller');
 const userController = require('./controllers/user_controller');
@@ -16,14 +16,14 @@ const productsController = require('./controllers/products_controller');
 
 const app = express()
 
-mongoose.connect(process.env.CONNECTION_STRING,
-    { useNewUrlParser: true },
-    (err) => {
-    if(err) {
-        console.log('Database Error----------------', err);
-    }
-    console.log('Connected to database');
-});
+// mongoose.connect(process.env.CONNECTION_STRING,
+//     { useNewUrlParser: true },
+//     (err) => {
+//     if(err) {
+//         console.log('Database Error----------------', err);
+//     }
+//     console.log('Connected to database');
+// });
 
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: false }))
