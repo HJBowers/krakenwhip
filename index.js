@@ -38,31 +38,31 @@ app.use(session(
   }
 ))
 
-setTimeout(() => {
-    //Cloudinary endpoint will get the credentials from cloudinary_controller which will be signed.
-    app.get('/api/upload', cloudinaryController.upload);
-
-    //Login / Logout
-    app.get('/auth/callback', userController.login)
-    app.post('/api/logout', userController.logout);
-
-    //Read the user's session.
-    app.get('/api/user-data', userController.readUserData);
-
-    //Admin
-    app.get('/api/users', adminController.getAdminUsers);
-
-    //Cart
-    app.post('/api/user-data/cart', userController.addToCart);
-    app.delete('/api/user-data/cart/:id', userController.removeFromCart);
-
-    //Products
-    app.get('/api/products', productsController.readAllProducts);
-    app.get('/api/products/:id', productsController.readProduct);
-    app.post('/api/products', adminController.createProduct);
-    app.put('/api/products/:id', adminController.updateProduct);
-    app.delete('/api/products/:id', adminController.deleteProduct);
-}, 200);
+// setTimeout(() => {
+//     //Cloudinary endpoint will get the credentials from cloudinary_controller which will be signed.
+//     app.get('/api/upload', cloudinaryController.upload);
+//
+//     //Login / Logout
+//     app.get('/auth/callback', userController.login)
+//     app.post('/api/logout', userController.logout);
+//
+//     //Read the user's session.
+//     app.get('/api/user-data', userController.readUserData);
+//
+//     //Admin
+//     app.get('/api/users', adminController.getAdminUsers);
+//
+//     //Cart
+//     app.post('/api/user-data/cart', userController.addToCart);
+//     app.delete('/api/user-data/cart/:id', userController.removeFromCart);
+//
+//     //Products
+//     app.get('/api/products', productsController.readAllProducts);
+//     app.get('/api/products/:id', productsController.readProduct);
+//     app.post('/api/products', adminController.createProduct);
+//     app.put('/api/products/:id', adminController.updateProduct);
+//     app.delete('/api/products/:id', adminController.deleteProduct);
+// }, 200);
 
 const port = process.env.PORT || 3001
 app.listen(port)
